@@ -1,18 +1,13 @@
 (function() {
 
-	var postForm = '<div id="post-form"><form>'
-	 + '<h1>Add new Post</h1>'
-	  + '<input type="text" id="title" placeholder="Title"></input></br>'
-	   + '<textarea id="post-content" rows="20" cols="50" placeholder="Description"></textarea></br>'
-	    + '<input type="text" id="tags" placeholder="Tags"></input></br>'
-	     + '<input type="button" id="post" value="POST"></input></br>'
-	      + '</form></div>';
+
 
 	$(document).on('click', "#add-post", showPostPage);
 	$(document).on('click', "#post", sendPostQuery);
 
 	function showPostPage() {
-		$(".content").html(postForm);
+		$('#post-form').show();
+		$(".content").hide();
 	}
 
 	function sendPostQuery() {

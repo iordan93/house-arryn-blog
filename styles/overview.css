@@ -4,6 +4,8 @@ a:link, a:visited {
 }
 
 body {
+    color: white;
+    background-color: skyblue;
     font-size:87.5%;
     line-height:1.5;
     text-align:left;

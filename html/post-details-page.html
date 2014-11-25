@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="../scripts/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.2.min.js"></script>
 		<script type="text/javascript" src="../scripts/addPost.js"></script>
+		<script type="text/javascript" src="../scripts/showPosts.js"></script>
 	</head>
 
 	<body>
@@ -72,43 +73,16 @@
 					<li>Year: 2012</li>
 				</ul>
 			</aside>
+			<div id="post-form">
+				<form>
+				<h1>Add new Post</h1>
+					<input type="text" id="title"placeholder="Title"></input></br>
+					<textarea id="post-content" rows="20" cols="50" placeholder="Description"></textarea></br>
+					<input type="text" id="tags" placeholder="Tags"></input></br>
+		    		<input type="button" id="post" value="POST"></input></br>
+	      		</form></div>';
 			<div class="content">
-				<article class="postContent">
-					<p>post 1</p>	
-					<h3><a href="">Post Title</a></h3>	
-					<p>
-					  Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat molestiae ducimus laborum voluptate quisquam adipisci aut tempore cum iste nesciunt repudiandae sapiente, et suscipit, repellendus ut nihil voluptas dolor dolorem. 
-					  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam laborum, veritatis! Excepturi aspernatur animi fugit facere laborum maiores, porro numquam. Animi temporibus aliquid mollitia, quibusdam sint qui laudantium incidunt nam.</p>
-					<p>
-					   Posted by <span><a href="#">Owner Name</a></span>
-					   at <span>date/time</span>
-					   <a href="#">Comments: </a><span>comments_count</span>
-					</p>
-				</article>
-				<article class="postContent">
-					<p>post 2</p>	
-					<h3><a href="">Post Title</a></h3>	
-					<p>
-					  Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat molestiae ducimus laborum voluptate quisquam adipisci aut tempore cum iste nesciunt repudiandae sapiente, et suscipit, repellendus ut nihil voluptas dolor dolorem. 
-					  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam laborum, veritatis! Excepturi aspernatur animi fugit facere laborum maiores, porro numquam. Animi temporibus aliquid mollitia, quibusdam sint qui laudantium incidunt nam.</p>
-					<p>
-					   Posted by <span><a href="#">Owner Name</a></span>
-					   at <span>date/time</span>
-					   <a href="#">Comments: </a><span>comments_count</span>
-					</p>
-				</article>
-				<article class="postContent">
-					<p>post 3</p>	
-					<h3><a href="">Post Title</a></h3>	
-					<p>
-					  Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat molestiae ducimus laborum voluptate quisquam adipisci aut tempore cum iste nesciunt repudiandae sapiente, et suscipit, repellendus ut nihil voluptas dolor dolorem. 
-					  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam laborum, veritatis! Excepturi aspernatur animi fugit facere laborum maiores, porro numquam. Animi temporibus aliquid mollitia, quibusdam sint qui laudantium incidunt nam.</p>
-					<p>
-					   Posted by <span><a href="#">Owner Name</a></span>
-					   at <span>date/time</span>
-					   <a href="#">Comments: </a><span>comments_count</span>
-					</p>
-				</article>
+				
 			</div>
 		</main>
 		<footer class="mainfooter">
@@ -119,5 +93,4 @@
             </nav>          
         </footer>
 	</body>
-
 </html>
