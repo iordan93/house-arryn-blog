@@ -9,8 +9,6 @@ namespace HouseArrynBlog.Api.Models
 {
     public class TagViewModel
     {
-        public int Id { get; set; }
-
         public string Name { get; set; }
 
         public static Expression<Func<Tag, TagViewModel>> FromTag
@@ -19,7 +17,6 @@ namespace HouseArrynBlog.Api.Models
             {
                 return t => new TagViewModel()
                 {
-                    Id = t.Id,
                     Name = t.Name
                 };
             }

@@ -209,7 +209,9 @@
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\TagsController.cs" />
     <Compile Include="Models\CommentBindingModel.cs" />
+    <Compile Include="Models\MostPopularTagViewModel.cs" />
     <Compile Include="Models\PaginatedPostViewModel.cs" />
     <Compile Include="Models\PostBindingModel.cs" />
     <Compile Include="Controllers\PostsController.cs" />
