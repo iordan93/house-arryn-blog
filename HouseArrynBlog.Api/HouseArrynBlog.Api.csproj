@@ -208,6 +208,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Models\CommentBindingModel.cs" />
     <Compile Include="Models\PaginatedPostViewModel.cs" />
     <Compile Include="Models\PostBindingModel.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\ConcisePostViewModel.cs" />
     <Compile Include="Models\PostViewModel.cs" />
+    <Compile Include="Models\SearchResultViewModel.cs" />
     <Compile Include="Models\TagViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
