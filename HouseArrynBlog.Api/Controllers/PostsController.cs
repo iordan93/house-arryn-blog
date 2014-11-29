@@ -64,6 +64,24 @@ namespace HouseArrynBlog.Api.Controllers
             return Json(formattedPost);
         }
 
+        [HttpGet]
+        [Route("List")]
+        public IHttpActionResult GetPostsList()
+        {
+            var context = new HouseArrynBlogContext();
+            var posts = context.Posts
+                .OrderByDescending(p => p.PublishDate)
+                .GroupBy(p => new { Year = p.PublishDate.Year, Month = p.PublishDate.Month })
+                .Select(g => new
+                {
+                    Year = g.Key.Year,
+                    Month = g.Key.Month,
+                    Posts = g.AsQueryable().Select(ConcisePostViewModel.FromPost)
+                });
+
+            return Json(posts);
+        }
+
         [HttpPost]
         [Authorize(Roles = "Administrator")]
         public IHttpActionResult CreatePost([FromBody] PostBindingModel postModel)
