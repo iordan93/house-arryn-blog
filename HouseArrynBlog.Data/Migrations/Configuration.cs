@@ -5,7 +5,7 @@ namespace HouseArrynBlog.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    public sealed class Configuration : DbMigrationsConfiguration<HouseArrynBlog.Data.HouseArrynBlogContext>
+    public sealed class Configuration : DbMigrationsConfiguration<HouseArrynBlogContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace HouseArrynBlog.Data.Migrations
             this.AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(HouseArrynBlog.Data.HouseArrynBlogContext context)
+        protected override void Seed(HouseArrynBlogContext context)
         {
             //  This method will be called after migrating to the latest version.
 

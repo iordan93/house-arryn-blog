@@ -85,7 +85,13 @@ namespace HouseArrynBlog.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new HouseArrynBlogUser() { UserName = model.UserName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
+            var user = new HouseArrynBlogUser() 
+            {
+                UserName = model.UserName, 
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Email = model.Email
+            };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
             await UserManager.AddToRoleAsync(user.Id, "User");
