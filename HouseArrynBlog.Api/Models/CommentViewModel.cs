@@ -19,6 +19,8 @@ namespace HouseArrynBlog.Api.Models
 
         public DateTime PublishDate { get; set; }
 
+        public int PostId { get; set; }
+
         public static Expression<Func<Comment, CommentViewModel>> FromComment
         {
             get
@@ -29,7 +31,8 @@ namespace HouseArrynBlog.Api.Models
                     AuthorUsername = c.Author.Username,
                     AuthorEmail = c.Author.Email,
                     Text = c.Text,
-                    PublishDate = c.PublishDate
+                    PublishDate = c.PublishDate,
+                    PostId = c.Post.Id
                 };
             }
         }

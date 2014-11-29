@@ -40,13 +40,14 @@ namespace HouseArrynBlog.Api.Models
                     PublishDate = p.PublishDate,
                     Comments = p.Comments
                         .AsQueryable()
+                        .OrderBy(c => c.PublishDate)
                         .Select(CommentViewModel.FromComment)
                         .ToList(),
                     Visits = p.Visits,
                     Category = new[] { p.Category }
                         .AsQueryable()
                         .Select(CategoryViewModel.FromCategory)
-                        .First(),
+                        .FirstOrDefault(),
                     Tags = p.Tags
                         .AsQueryable()
                         .Select(TagViewModel.FromTag)
