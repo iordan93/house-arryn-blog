@@ -13,8 +13,24 @@ namespace HouseArrynBlog.Api.Controllers
     [RoutePrefix("api/Comments")]
     public class CommentsController : ApiController
     {
+        [HttpGet]
+        public IHttpActionResult GetComments(int id)
+        {
+            var context = new HouseArrynBlogContext();
+            var post = TryGetPost(context, id);
+            if (post == null)
+            {
+                return BadRequest("There is no post with the specified ID: " + id + ".");
+            }
+
+            var commentModels = post.Comments
+                .AsQueryable()
+                .Select(CommentViewModel.FromComment);
+            return Json(commentModels);
+        }
+
         [HttpPost]
-        public IHttpActionResult AddComment(int id, [FromBody] CommentBindingModel commentModel) 
+        public IHttpActionResult AddComment(int id, [FromBody] CommentBindingModel commentModel)
         {
             if (!ModelState.IsValid)
             {
@@ -41,7 +57,7 @@ namespace HouseArrynBlog.Api.Controllers
                 context.SaveChanges();
             }
 
-            var comment = new Comment() 
+            var comment = new Comment()
             {
                 Post = post,
                 Author = author,
