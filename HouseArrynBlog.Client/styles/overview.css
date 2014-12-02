@@ -108,6 +108,10 @@ aside {
     padding: 2% 3%;
 }
 
+.comment-form {
+    display: none;
+}
+
 
 /*Footer*/
 
