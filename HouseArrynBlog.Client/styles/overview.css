@@ -116,6 +116,11 @@ aside {
     display: none;
 }
 
+.postContent p {
+    height: 150px;
+    overflow: hidden;
+}
+
 
 /*Footer*/
 
