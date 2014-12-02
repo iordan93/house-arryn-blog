@@ -73,7 +73,9 @@
     <Content Include="images\blog-background.jpg" />
     <Content Include="images\search-icon.png" />
     <Content Include="images\team-logo.png" />
+    <Content Include="index.html" />
     <Content Include="scripts\addPost.js" />
+    <Content Include="scripts\app\add-post.js" />
     <Content Include="scripts\app\controller.js" />
     <Content Include="scripts\app\http-requester.js" />
     <Content Include="scripts\app\repository.js" />
@@ -84,6 +86,7 @@
     <Content Include="scripts\lib\jquery-2.1.1.min.js" />
     <Content Include="scripts\lib\rsvp.js" />
     <Content Include="scripts\lib\template.js" />
+    <Content Include="scripts\app\show-posts.js" />
     <Content Include="styles\overview.css" />
     <Content Include="styles\postForm.css" />
     <Content Include="styles\style-demo.css" />
@@ -92,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts\partials\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
