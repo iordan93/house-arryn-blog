@@ -76,6 +76,7 @@
     <Content Include="index.html" />
     <Content Include="scripts\addPost.js" />
     <Content Include="scripts\app\add-post.js" />
+    <Content Include="scripts\app\animate-post.js" />
     <Content Include="scripts\app\controller.js" />
     <Content Include="scripts\app\http-requester.js" />
     <Content Include="scripts\app\repository.js" />
