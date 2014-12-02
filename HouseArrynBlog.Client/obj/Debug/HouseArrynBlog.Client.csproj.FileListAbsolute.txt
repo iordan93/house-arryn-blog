@@ -1,0 +1,6 @@
+C:\Users\rawket\Desktop\house-arryn-blog.git\trunk\HouseArrynBlog.Client\bin\HouseArrynBlog.Client.dll.config
+C:\Users\rawket\Desktop\house-arryn-blog.git\trunk\HouseArrynBlog.Client\bin\HouseArrynBlog.Client.dll
+C:\Users\rawket\Desktop\house-arryn-blog.git\trunk\HouseArrynBlog.Client\bin\HouseArrynBlog.Client.pdb
+C:\Users\rawket\Desktop\house-arryn-blog.git\trunk\HouseArrynBlog.Client\obj\Debug\HouseArrynBlog.Client.csprojResolveAssemblyReference.cache
+C:\Users\rawket\Desktop\house-arryn-blog.git\trunk\HouseArrynBlog.Client\obj\Debug\HouseArrynBlog.Client.dll
+C:\Users\rawket\Desktop\house-arryn-blog.git\trunk\HouseArrynBlog.Client\obj\Debug\HouseArrynBlog.Client.pdb
