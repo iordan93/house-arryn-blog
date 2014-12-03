@@ -17,6 +17,7 @@ using HouseArrynBlog.Api.Models;
 using HouseArrynBlog.Api.Providers;
 using HouseArrynBlog.Api.Results;
 using HouseArrynBlog.Models;
+using HouseArrynBlog.Data;
 
 namespace HouseArrynBlog.Api.Controllers
 {
@@ -83,6 +84,14 @@ namespace HouseArrynBlog.Api.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
+            }
+
+            var roleStore = new RoleStore<IdentityRole>(new HouseArrynBlogContext());
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+            if (!roleManager.RoleExists("Administrator"))
+            {
+                await roleManager.CreateAsync(new IdentityRole { Name = "Administrator" });
+                await roleManager.CreateAsync(new IdentityRole { Name = "User" });
             }
 
             var user = new HouseArrynBlogUser() 
