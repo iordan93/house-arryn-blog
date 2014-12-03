@@ -9,105 +9,105 @@
     <link rel="stylesheet" href="styles/postForm.css">
     <link rel="stylesheet" href="styles/toastr.css" />
     <script src="scripts/lib/jquery-2.1.1.min.js"></script>
-    <!--<script src="scripts/lib/class.js"></script>
+    <script src="scripts/lib/class.js"></script>
     <script src="scripts/lib/template.js"></script>
     <script src="scripts/lib/rsvp.js"></script>
     <script src="scripts/app/http-requester.js"> </script>
     <script src="scripts/app/repository.js"></script>
     <script src="scripts/app/controller.js"></script>
-    <script src="scripts/app/ui.js"></script>-->
+    <script src="scripts/app/ui.js"></script>
     <script src="scripts/lib/toastr.js"></script>
     <script src="scripts/app/show-posts.js"></script>
     <script src="scripts/app/add-post.js"></script>
     <script src="scripts/app/animate-post.js"></script>
-	</head>
+</head>
 
-	<body>
-		 <header class="mainheader">
-    		<h1><img src="" alt="House Arryn's blog"/></h1>
-            <nav>
-                <ul id="menu">
-                    <li>
-                        <a id="home" href="#">Home</a>
-                        <a id="add-post" href="#">Post</a>
-    					<a id="about" href="#">About</a>
-                        <a id="contacts" href="#">Contact Me</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+<body>
+    <header class="mainheader">
+        <h1><img src="" alt="House Arryn's blog" /></h1>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a id="home" href="#">Home</a>
+                    <a id="add-post" href="#">Post</a>
+                    <a id="about" href="#">About</a>
+                    <a id="contacts" href="#">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-		<main class="maincontent">
-			<aside>
-				<input type="text" name="search" id="search" placeholder="Post or Author Name">
-				<input type="submit" value="Search">
-				<h3>Popular Posts</h3>
-				<article class="postSmallView">
-					<h4><a href="">Post Title</a></h4>
-					<p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					<h4><a href="">Post Title</a></h4>
-					<p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					<h4><a href="">Post Title</a></h4>
-					<p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-				</article>
+    <main class="maincontent">
+        <aside>
+            <input type="text" name="search" id="search" placeholder="Post or Author Name">
+            <input type="submit" value="Search">
+            <h3>Popular Posts</h3>
+            <article class="postSmallView">
+                <h4><a href="">Post Title</a></h4>
+                <p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <h4><a href="">Post Title</a></h4>
+                <p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <h4><a href="">Post Title</a></h4>
+                <p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            </article>
 
-				<h3>Recent Posts</h3>
-				<article class="postSmallView">
-					<h4><a href="">Post Title</a></h4>
-					<p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					<h4><a href="">Post Title</a></h4>
-					<p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					<h4><a href="">Post Title</a></h4>
-					<p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-				</article>
+            <h3>Recent Posts</h3>
+            <article class="postSmallView">
+                <h4><a href="">Post Title</a></h4>
+                <p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <h4><a href="">Post Title</a></h4>
+                <p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <h4><a href="">Post Title</a></h4>
+                <p>Post content Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            </article>
 
-				<h3>Blog Archive</h3>
-				<ul>
-					<li>Year: 2014 (posts_count)
-						<ul>
-							<li>Month: December (posts_count)
-								<ul>
-									<li><a href="">post_title</a></li>
-									<li><a href="">post_title</a></li>
-									<li><a href="">post_title</a></li>
-									<li><a href="">post_title</a></li>
-								</ul>
-							</li>
-							<li>Month: November (posts_count)</li>
-							<li>Month: February (posts_count)</li>
-							<li>Month: January (posts_count)</li>
-						</ul>
-					</li>
-					<li>Year: 2013</li>
-					<li>Year: 2012</li>
-				</ul>
-			</aside>
+            <h3>Blog Archive</h3>
+            <ul>
+                <li>
+                    Year: 2014 (posts_count)
+                    <ul>
+                        <li>
+                            Month: December (posts_count)
+                            <ul>
+                                <li><a href="">post_title</a></li>
+                                <li><a href="">post_title</a></li>
+                                <li><a href="">post_title</a></li>
+                                <li><a href="">post_title</a></li>
+                            </ul>
+                        </li>
+                        <li>Month: November (posts_count)</li>
+                        <li>Month: February (posts_count)</li>
+                        <li>Month: January (posts_count)</li>
+                    </ul>
+                </li>
+                <li>Year: 2013</li>
+                <li>Year: 2012</li>
+            </ul>
+        </aside>
 
-			<div id="post-form">
-				<form>
-				<h1>Add new Post</h1>
-					<input type="text" id="title"placeholder="Title"></input></br>
-					<textarea id="post-content" rows="20" cols="50" placeholder="Description"></textarea></br>
-					<input type="text" id="tags" placeholder="Tags"></input></br>
-		    		<input type="button" id="post" value="POST"></input></br>
-	      		</form>
-            </div>
+        <div id="post-form">
+            <form>
+                <h1>Add new Post</h1>
+                <input type="text" id="title" placeholder="Title" /><br />
+                <textarea id="post-content" rows="20" cols="50" placeholder="Description"></textarea><br />
+                <input type="text" id="tags" placeholder="Tags" /><br />
+                <input type="button" id="post" value="POST" /><br />
+            </form>
+        </div>
 
-            <!--  P o s t s  -->
+        <!--  P o s t s  -->
 
-            <div class="content">
-                <ul id="posts">
-                    
-                </ul>
-            </div>
+        <div class="content">
+            <ul id="posts"></ul>
+        </div>
 
-		</main>
-		<footer class="mainfooter">
-            <nav>
-                <span>Author Name</span>
-			   <span>Contacts: <a href="author@gmail.com">ContactMe</a></span>
-                <p>Team House Arryn</p>
-            </nav>
-        </footer>
-	</body>
+    </main>
+    <footer class="mainfooter">
+        <nav>
+            <span>Author Name</span>
+            <span>Contacts: <a href="author@gmail.com">ContactMe</a></span>
+            <p>Team House Arryn</p>
+        </nav>
+    </footer>
+</body>
 </html>
