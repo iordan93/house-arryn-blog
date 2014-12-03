@@ -1,5 +1,9 @@
 house-arryn-blog
 ================
+# Server URL
+You can get the working API at this link: [Appharbor](http://housearrynblog.apphb.com/).
+
+In order to create or edit posts, use the following credentials: _username:_ admin, _password:_ admin123
 
 # Demo Application
 Here is the repository for the demo application we created: [https://github.com/iordan93/JSAppDemo](https://github.com/iordan93/JSAppDemo). Run it with Visual Studio (you only need to press (Ctrl + ) F5). Without rinning the project, the server will not be available and no requests would be accepted. Then you can start the Demo.Client index.html file in your browser normally.
