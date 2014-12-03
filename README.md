@@ -1,7 +1,7 @@
 house-arryn-blog
 ================
 # Server URL
-You can get the working API at this link: [Appharbor](http://housearrynblog.apphb.com/).
+You can get the working API at this link: [AppHarbor](http://housearrynblog.apphb.com/).
 
 In order to create or edit posts, use the following credentials: *username:* admin, *password:* admin123
 
