@@ -83,7 +83,7 @@ namespace HouseArrynBlog.Api.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public IHttpActionResult CreatePost([FromBody] PostBindingModel postModel)
         {
             if (!ModelState.IsValid)
@@ -125,7 +125,7 @@ namespace HouseArrynBlog.Api.Controllers
         }
 
         [HttpPut]
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public IHttpActionResult UpdatePost(int id, [FromBody] PostBindingModel postModel)
         {
             if (!ModelState.IsValid)
