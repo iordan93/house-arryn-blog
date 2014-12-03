@@ -88,10 +88,12 @@
     <Content Include="scripts\lib\rsvp.js" />
     <Content Include="scripts\lib\template.js" />
     <Content Include="scripts\app\show-posts.js" />
+    <Content Include="scripts\lib\toastr.js" />
     <Content Include="styles\overview.css" />
     <Content Include="styles\postForm.css" />
     <Content Include="styles\style-demo.css" />
     <Content Include="styles\style.css" />
+    <Content Include="styles\toastr.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

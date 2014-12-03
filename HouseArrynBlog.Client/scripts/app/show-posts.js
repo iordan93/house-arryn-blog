@@ -44,6 +44,7 @@
 		      		"</form>" +
 				"</div>" +
 			"</article></li>";
+
         $.ajax({
             url: 'https://api.parse.com/1/classes/Post',
             method: 'GET',
@@ -67,9 +68,6 @@
                             console.log(posts[i].comments[j]);
                             $(idString).append(comment);
                         }
-
-                    }
-                    else {
                     }
                 }
             }

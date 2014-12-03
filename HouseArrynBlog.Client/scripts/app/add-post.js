@@ -44,10 +44,10 @@
             dataType: "json",
             headers: headers,
             success: function (data) {
-                alert("Congrats! You successfully created a new Post!");
+                toastr.success("You successfully created a new Post!", "Congrats! :)");
             },
             error: function (model, error) {
-                alert("Sorry! Shit happens!");
+                toastr.error("Shit happens!", "Sorry! :(");
             }
         });
     }
