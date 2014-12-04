@@ -13,6 +13,22 @@
     var AccountRepository = Class.extend({
         init: function (rootUrl) {
             this.rootUrl = rootUrl + "account/";
+        },
+        register: function (username, email, firstName, lastName, password, confirmPassword) {
+            var user = {
+                username: username,
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+                confirmPassword: confirmPassword
+            };
+
+            return httpRequester.postJson(this.rootUrl + "register/", user);
+        },
+        login: function (username, password) {
+            // TODO: Add validation
+            return httpRequester.login(username, password);
         }
     });
 

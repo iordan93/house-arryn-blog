@@ -22,6 +22,7 @@ namespace HouseArrynBlog.Api
 
         public void ConfigureAuth(IAppBuilder app)
         {
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.CreatePerOwinContext(() => new HouseArrynBlogContext());
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
 

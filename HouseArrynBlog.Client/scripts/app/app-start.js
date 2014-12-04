@@ -1,4 +1,4 @@
-﻿(function (controller) {
+﻿(function (controller, repository) {
     //var repository = repository.get("http://housearrynblog.apphb.com/api/");
     //repository.posts.create("New title", "Some sample content goes here... :P", ["tag", "programming", "sample"])
     //.then(function (data) {
@@ -16,7 +16,13 @@
     //}, function (err) {
     //    console.log(err);
     //});
-
-    var controller = controller.get();
-    controller.loadMainPage();
-})(controller);
+    var repository = repository.get("http://housearrynblog.apphb.com/api/");
+    repository.account.login("admin", "admin123")
+        .then(function (data) {
+            console.log(data);
+        }, function (err) {
+            console.log(err);
+        });
+    //var controller = controller.get();
+    //controller.loadMainPage();
+})(controller, repository);

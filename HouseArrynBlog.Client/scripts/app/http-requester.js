@@ -79,10 +79,30 @@
         return promise;
     }
 
+    function login(username, password) {
+        var promise = new RSVP.Promise(function (resolve, reject) {
+            $.ajax({
+                url: "http://housearrynblog.apphb.com/api/token",
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                data: "grant_type=password&username=" + username + "&password=" + password,
+                success: function (data) {
+                    resolve(data);
+                },
+                error: function (err) {
+                    reject(err);
+                }
+            });
+        });
+
+        return promise;
+    }
+
     return {
         getJson: getJson,
         postJson: postJson,
         putJson: putJson,
-        deleteJson: deleteJson
+        deleteJson: deleteJson,
+        login: login
     }
 })();
