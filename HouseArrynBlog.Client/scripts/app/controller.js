@@ -24,7 +24,7 @@
                         var id = $(this).data("id");
                         self.repository.posts.getById(id)
                         .then(function (post) {
-                            return ui.loadHtml("post-concise", post);
+                            return ui.loadHtml("post-details", post);
                         }, function (err) {
                             console.log(err);
                         })
