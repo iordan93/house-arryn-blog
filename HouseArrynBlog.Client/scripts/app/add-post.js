@@ -11,5 +11,4 @@
         $('#post-form').show(600);
         $(".content").hide(300);
     }
-    
 })();
