@@ -10,17 +10,15 @@
             var self = this;
             this.repository.posts.getAll()
             .then(function (posts) {
+                $('#post-form').hide();
                 return ui.loadHtml("post-concise", posts);
             }, function (err) {
                 console.log(err);
             })
             .then(function (result) {
-                var div = $("<div>");
                 for (var i = 0; i < result.data.length; i++) {
-                    div.append(tmpl(result.templateString, result.data[i]));
+                    $('#posts').append(tmpl(result.templateString, result.data[i]));
                 }
-
-                div.appendTo($("#wrapper"));
 
                 $(".get-single-post").off("click")
                     .on("click", function (e) {

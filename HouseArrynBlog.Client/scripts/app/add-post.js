@@ -1,19 +1,15 @@
 ﻿(function () {
     var post;
-    var headers = {
-        'X-Parse-Application-Id': 'IvEahynuZviRfRywsAjsEwA12zBXNL99wwaDnmkq',
-        'X-Parse-REST-API-Key': 'ayNFyMqECrWWtq3mwdsUsBZ3eOlPDAXOqjBEzZ3S'
-    };
 
     $(document).on('click', "#add-post", showPostPage);
-    $(document).on('click', "#post", sendPostQuery);
+    //$(document).on('click', "#post", sendPostQuery);
 
     function showPostPage() {
         $('#post-form').show();
         $(".content").hide();
     }
 
-    function sendPostQuery() {
+   /* function sendPostQuery() {
         var title = $('#title').val();
         var content = $('#post-content').val();
         var tags = $('#tags')
@@ -50,5 +46,5 @@
                 toastr.error("Shit happens!", "Sorry! :(");
             }
         });
-    }
+    }*/
 }());

@@ -19,7 +19,7 @@ body {
 /*Header*/
 
 .mainheader {
-    width: 75%;
+    width: 70%;
 }
 
 .mainheader nav {
@@ -60,8 +60,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003333', end
 
 /*Main*/
 
-.content {
-    width: 50%;
+#wrapper {
+    width: 70%;
     float:left;
 }
 
