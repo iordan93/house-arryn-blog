@@ -1,9 +1,31 @@
 ﻿<article class="post">
-    <strong><a data-id="<%= id %>" href="#" class="get-single-post"><%= title %></a></strong> (<em><%= category.name %></em>)
-    <span> Date: <%= publishDate %> </span> <br />
+    <div class="post-header">
+        <h3><strong><a data-id="<%= id %>" href="#" class="get-single-post"><%= title %></a></strong></h3> (<em><%= category.name %></em>)
+        <span class="post-date"> Last updated on: <%= publishDate %> </span>
+    </div>
+    <hr />
+    <br />
     <strong>by <%= author %></strong>
     <p><%= content %></p>
+    <hr />
     <p>Visits: <%= visits %></p>
+    view comments : <button class="post-button"><img src="../images/comment.png" alt=""></button>
+    add new comment : <button id="add-comment" class="post-button"><img src="../images/add-comment.png" alt=""></button>
+    <br />
+    <div>
+        <form class="comment-form hidden">
+            <h3>Add a comment to this post</h3>
+            <input class="comment-name"type="text" placeholder="Name" />
+            <br />
+            <input class="comment-email" type="text" placeholder="E-mail" /> *Optional
+            <br />
+            <textarea class="comment-description" type="text" placeholder="Description"></textarea>
+            <br />
+            <input class="comment-button" type="button" value="Comment :)" />
+        </form>
+    </div>
+
+
     
     <!--<% for(var i = 0; i < comments.length; i++) { %>
         <div><%= comments[i].content %></div>

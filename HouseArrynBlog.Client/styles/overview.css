@@ -61,7 +61,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003333', end
 /*Main*/
 
 .content {
-    width: 70%;
+    width: 50%;
     float:left;
 }
 
@@ -104,7 +104,16 @@ aside {
     padding: 2% 3%;
 }
 
-.comment-form {
+.comment-form input{
+    color: black;
+}
+.comment-form textarea{
+    width: 300px;
+    height: 200px;
+    color: black;
+}
+
+.hidden {
     display: none;
 }
 
@@ -112,9 +121,18 @@ aside {
     display: none;
 }
 
-.postContent p {
+.post p {
     height: 150px;
     overflow: hidden;
+}
+
+.post-date {
+    float: right
+}
+
+.post-button img {
+    width: 20px;
+    height: auto;
 }
 
 .hover {
