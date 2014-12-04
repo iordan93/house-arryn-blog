@@ -30,10 +30,12 @@ namespace HouseArrynBlog.Api
             {
                 PolicyProvider = new CorsPolicyProvider() 
                 {
-                    PolicyResolver = r => Task.FromResult(r.Path.ToString().StartsWith("/api/token") ? tokenCorsPolicy : null);
+                    PolicyResolver = r => Task.FromResult(r.Path.ToString().StartsWith("/api/token") ? tokenCorsPolicy : null)
                 }
             };
-            app.UseCors(CorsOptions.AllowAll);
+            
+            app.UseCors(corsOptions);
+            
             app.CreatePerOwinContext(() => new HouseArrynBlogContext());
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
 
