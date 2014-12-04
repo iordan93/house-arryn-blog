@@ -1,0 +1,28 @@
+<article class="post">
+    <div class="post-header">
+        <h3><strong><a data-id="<%= id %>" href="#" class="get-single-post"><%= title %></a></strong></h3> 
+        (<em><%= category.name %></em>)
+        <span class="post-date"><img src="../images/post-date.png" /> Last updated on: <%= publishDate %> </span>
+    </div>
+    <hr />
+    <br />
+    <strong>by <%= author %></strong>
+    <p class="post-description"><%= content %></p>
+    <hr />
+    <h4>Visits: <%= visits %></h4>
+    <span>view all comments :</span> <button class="view-comments"><img src="images/comment.png" /></button>
+    <span>add new comment :</span> <button class="add-comment"><img src="images/add-comment.png" /></button>
+    <br />
+    <div>
+        <form class="comment-form hidden">
+            <h3>Add new comment to the post</h3>
+            <input class="comment-name"type="text" placeholder="Name" />
+            <br />
+            <input class="comment-email" type="text" placeholder="E-mail" /> *Optional
+            <br />
+            <textarea class="comment-text" type="text" placeholder="Comment content"></textarea>
+            <br />
+            <input class="comment-button" type="button" value="Comment" />
+        </form>
+    </div>
+</article>
