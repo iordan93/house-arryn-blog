@@ -11,6 +11,9 @@ using Owin;
 using HouseArrynBlog.Api.Providers;
 using HouseArrynBlog.Api.Models;
 using HouseArrynBlog.Data;
+using Microsoft.Owin.Cors;
+using System.Web.Cors;
+using System.Threading.Tasks;
 
 namespace HouseArrynBlog.Api
 {
@@ -22,7 +25,15 @@ namespace HouseArrynBlog.Api
 
         public void ConfigureAuth(IAppBuilder app)
         {
-            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+            var tokenCorsPolicy = new CorsPolicy() { AllowAnyOrigin=true, AllowAnyHeader=true, AllowAnyMethod=true };
+            var corsOptions = new CorsOptions() 
+            {
+                PolicyProvider = new CorsPolicyProvider() 
+                {
+                    PolicyResolver = r => Task.FromResult(r.Path.ToString().StartsWith("/api/token") ? tokenCorsPolicy : null);
+                }
+            };
+            app.UseCors(CorsOptions.AllowAll);
             app.CreatePerOwinContext(() => new HouseArrynBlogContext());
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
 
