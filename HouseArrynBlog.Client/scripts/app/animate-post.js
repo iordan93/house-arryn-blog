@@ -8,4 +8,8 @@
     $(document).on("click", ".view-all", function (event) {
         $(this).closest(".postContent").children("p").css( "height", "auto");
     });
+
+    $(document).on('mouseenter mouseleave', '.menu', function () {
+        $(this).toggleClass('hover');
+    });
 }());

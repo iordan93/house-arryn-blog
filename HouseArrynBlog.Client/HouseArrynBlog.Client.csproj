@@ -59,10 +59,15 @@
   <ItemGroup>
     <Content Include="fonts\Capture_it.ttf" />
     <None Include="scripts\lib\jquery-2.1.1.intellisense.js" />
+    <Content Include="scripts\lib\bootstrap.js" />
+    <Content Include="scripts\lib\bootstrap.min.js" />
     <Content Include="scripts\lib\jquery-2.1.1.js" />
     <Content Include="scripts\lib\jquery-2.1.1.min.js" />
     <Content Include="scripts\lib\jquery-2.1.1.min.map" />
     <Content Include="packages.config" />
+    <Content Include="scripts\partials\post-concise.html" />
+    <Content Include="styles\bootstrap-theme.css.map" />
+    <Content Include="styles\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -88,12 +93,17 @@
     <Content Include="scripts\app\repository.js" />
     <Content Include="scripts\app\ui.js" />
     <Content Include="scripts\lib\class.js" />
+    <Content Include="scripts\lib\jquery.twbsPagination.js" />
     <Content Include="scripts\lib\rsvp.js" />
     <Content Include="scripts\lib\template.js" />
     <Content Include="scripts\app\show-posts.js" />
     <Content Include="scripts\lib\toastr.js" />
     <Content Include="scripts\loader.js" />
     <None Include="scripts\_references.js" />
+    <Content Include="styles\bootstrap-theme.css" />
+    <Content Include="styles\bootstrap-theme.min.css" />
+    <Content Include="styles\bootstrap.css" />
+    <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\overview.css" />
     <Content Include="styles\postForm.css" />
     <Content Include="styles\style-demo.css" />
@@ -104,9 +114,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="scripts\partials\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
