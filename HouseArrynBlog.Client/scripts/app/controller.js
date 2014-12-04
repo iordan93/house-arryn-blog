@@ -19,7 +19,6 @@
                 for (var i = 0; i < result.data.length; i++) {
                     $('#posts').append(tmpl(result.templateString, result.data[i]));
                 }
-
                 $(".get-single-post").off("click")
                     .on("click", function (e) {
                         var id = $(this).data("id");

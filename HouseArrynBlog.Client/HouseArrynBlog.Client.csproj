@@ -62,6 +62,7 @@
     <Content Include="images\add-comment.png" />
     <Content Include="images\comment.png" />
     <Content Include="images\comments.png" />
+    <Content Include="images\read-more.png" />
     <Content Include="scripts\lib\bootstrap.js" />
     <Content Include="scripts\lib\bootstrap.min.js" />
     <Content Include="scripts\lib\jquery-2.1.1.js" />
@@ -108,7 +109,7 @@
     <Content Include="styles\bootstrap.css" />
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\overview.css" />
-    <Content Include="styles\postForm.css" />
+    <Content Include="styles\post-form.css" />
     <Content Include="styles\style-demo.css" />
     <Content Include="styles\style.css" />
     <Content Include="styles\toastr.css" />

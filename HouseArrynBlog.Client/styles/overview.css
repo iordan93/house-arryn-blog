@@ -130,9 +130,18 @@ aside {
     float: right
 }
 
-.post-button img {
-    width: 20px;
+.post span {
+    font-size: 120%;
+    margin-left: 100px;
+}
+
+.post img {
+    width: 30px;
     height: auto;
+}
+
+.post button {
+    border-radius: 20px;
 }
 
 .hover {

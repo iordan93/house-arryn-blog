@@ -1,50 +1,15 @@
 ﻿(function () {
-    var post;
+    console.log(controller);
+    var makeReq = function () {
+        var ctrlr = controller.get();
+        ctrlr.submitPostForm();
 
+    };
     $(document).on('click', "#add-post", showPostPage);
-    //$(document).on('click', "#post", sendPostQuery);
-
+    $(document).on('click', "#post-button", makeReq);
     function showPostPage() {
-        $('#post-form').show();
-        $(".content").hide();
+        $('#post-form').show(600);
+        $(".content").hide(300);
     }
-
-   /* function sendPostQuery() {
-        var title = $('#title').val();
-        var content = $('#post-content').val();
-        var tags = $('#tags')
-			.val()
-			.split(',');
-
-        for (var tag in tags) {
-            tags[tag] = tags[tag].trim();
-        }
-        //filters empty elements
-        tags = $.grep(tags, function (n) {
-            return (n)
-        });
-        var comments = [];
-        post = {
-            title: title,
-            content: content,
-            tags: tags,
-            comments: comments,
-            visits: 0
-        };
-        console.log(post);
-        $.ajax({
-            url: 'https://api.parse.com/1/classes/Post',
-            method: 'POST',
-            contentType: "application/json",
-            data: JSON.stringify(post),
-            dataType: "json",
-            headers: headers,
-            success: function (data) {
-                toastr.success("You successfully created a new Post!", "Congrats! :)");
-            },
-            error: function (model, error) {
-                toastr.error("Shit happens!", "Sorry! :(");
-            }
-        });
-    }*/
-}());
+    
+})();
