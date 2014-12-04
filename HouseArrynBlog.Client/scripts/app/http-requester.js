@@ -87,6 +87,7 @@
                 contentType: "application/x-www-form-urlencoded",
                 data: "grant_type=password&username=" + username + "&password=" + password,
                 success: function (data) {
+                    localStorage.setItem("HouseArrynBlogLogin", JSON.stringify(data));
                     resolve(data);
                 },
                 error: function (err) {

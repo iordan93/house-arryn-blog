@@ -29,6 +29,16 @@
         login: function (username, password) {
             // TODO: Add validation
             return httpRequester.login(username, password);
+        },
+        isLoggedIn: function () {
+            return localStorage.getItem("HouseArrynBlogLogin") != null;
+        },
+        getLoginHeaders: function () {
+            if (this.isLoggedIn()) {
+                return {
+                    "Authorization": "Bearer " + JSON.parse(localStorage.getItem("HouseArrynBlogLogin")).access_token
+                }
+            }
         }
     });
 
