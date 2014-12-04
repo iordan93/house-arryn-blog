@@ -16,6 +16,6 @@
     });
 
     $(document).on('click', '.read-more', function () {
-        
+        $('.post p').toggleClass('show');
     });
 }());

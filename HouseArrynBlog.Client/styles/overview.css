@@ -121,9 +121,12 @@ aside {
     display: none;
 }
 
-.post p {
+.post-description {
     height: 150px;
     overflow: hidden;
+}
+.show {
+    height: auto;
 }
 
 .post-date {

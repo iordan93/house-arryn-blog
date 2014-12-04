@@ -62,6 +62,7 @@
     <Content Include="images\add-comment.png" />
     <Content Include="images\comment.png" />
     <Content Include="images\comments.png" />
+    <Content Include="images\post-date.png" />
     <Content Include="images\read-more.png" />
     <Content Include="scripts\lib\bootstrap.js" />
     <Content Include="scripts\lib\bootstrap.min.js" />
