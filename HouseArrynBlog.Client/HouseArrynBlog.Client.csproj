@@ -81,9 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="html\home-page-demo.html" />
-    <Content Include="html\post-details-page-2.html" />
-    <Content Include="html\post-details-page.html" />
-    <Content Include="html\_SidebarPartial.html" />
     <Content Include="images\blog-background.jpg" />
     <Content Include="images\search-icon.png" />
     <Content Include="images\team-logo.png" />
