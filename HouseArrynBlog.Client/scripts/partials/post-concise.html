@@ -1,6 +1,6 @@
-﻿<article class="post">
+<article class="post">
     <div class="post-header">
-        <h3><strong><a data-id="<%= id %>" href="#" class="get-single-post"><%= title %></a></strong></h3> (<em><%= category.name %></em>)
+        <h3><strong><a data-id="<%= id %>" href="#" class="get-post"><%= title %></a></strong></h3> (<em><%= category.name %></em>)
         <span class="post-date"><img src="../images/post-date.png" /> Last updated on: <%= publishDate %> </span>
     </div>
     <hr />
@@ -8,27 +8,6 @@
     <strong>by <%= author %></strong>
     <p class="post-description"><%= content %></p>
     <hr />
-    <h4>Visits: <%= visits %></h4>
-    <span>view comments :</span> <button class="view-comments"><img src="images/comment.png" /></button>
-    <span>add new comment :</span> <button class="add-comment"><img src="images/add-comment.png" /></button>
-       <span>read more :</span> <button class="read-more"><img src="images/read-more.png" /></button>
-    <br />
-    <div>
-        <form class="comment-form hidden">
-            <h3>Add a comment to this post</h3>
-            <input class="comment-name"type="text" placeholder="Name" />
-            <br />
-            <input class="comment-email" type="text" placeholder="E-mail" /> *Optional
-            <br />
-            <textarea class="comment-description" type="text" placeholder="Description"></textarea>
-            <br />
-            <input class="comment-button" type="button" value="Comment :)" />
-        </form>
-    </div>
-
-
-    
-    <!--<% for(var i = 0; i < comments.length; i++) { %>
-        <div><%= comments[i].content %></div>
-    <% } %>-->
+    <h4>Visits: <%= visits %> , Comments: <%= comments.length %></h4>
+    <span>read more :</span> <button class="read-more"><img src="images/read-more.png" /></button>
 </article>
