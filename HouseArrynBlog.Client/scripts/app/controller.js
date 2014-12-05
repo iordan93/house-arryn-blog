@@ -10,7 +10,9 @@
             var self = this;
             this.repository.posts.getAll()
             .then(function (posts) {
-                $('#post-form').hide();
+                $('#posts').html("");
+                $('.content').show(600);
+                $('#post-form').hide(300);
                 return ui.loadHtml("post-concise", posts);
             }, function (err) {
                 console.log(err);
@@ -52,6 +54,44 @@
                 console.log("Post created!");
             }, function (err) {
                 console.log("You have been pwned!");
+            });
+        },
+        loadPostsByTag: function () {
+            var self = this;
+            this.repository.posts.getAll()
+            .then(function (posts) {
+                $('#posts').html("");
+                
+                $('#post-form').hide(300);
+               
+                var tagMatch = $('#search-tag').val();
+                $('#posts').append("<h1>Results for: "+ tagMatch + "</h1>");
+                
+                var matches = [];
+                for (var i = 0; i < posts.length; i++) {
+                    for (var j = 0; j < posts[i].tags.length; j++) {
+                        var currentTag = posts[i].tags[j].Name;
+                        if(currentTag === tagMatch) {
+                            matches.push(posts[i]);
+                        }
+                    }
+                }
+                console.log(matches);
+                return ui.loadHtml("post-concise", matches);
+            }, function (err) {
+                console.log(err);
+            })
+            .then(function (result) {
+                if (!result.data.length) {
+                    $('#posts').append("<br /><hr /><h1>Sorry, son! There are no matches for this tag!<h1 />")
+                }
+                else {
+                    for (var i = 0; i < result.data.length; i++) {
+                        $('#posts').append(tmpl(result.templateString, result.data[i]));
+                    }
+                }
+            }, function (err) {
+                console.log(err);
             });
         }
     });

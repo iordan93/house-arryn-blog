@@ -63,6 +63,8 @@
     <Content Include="images\add-comment.png" />
     <Content Include="images\post-date.png" />
     <Content Include="images\read-more.png" />
+    <Content Include="images\search.png" />
+    <Content Include="scripts\app\show-posts-by-tag.js" />
     <Content Include="scripts\lib\bootstrap.js" />
     <Content Include="scripts\lib\bootstrap.min.js" />
     <Content Include="scripts\lib\jquery-2.1.1.js" />
@@ -107,6 +109,7 @@
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\overview.css" />
     <Content Include="styles\post-form.css" />
+    <Content Include="images\search-ico.png" />
     <Content Include="styles\style-demo.css" />
     <Content Include="styles\style.css" />
     <Content Include="styles\toastr.css" />
