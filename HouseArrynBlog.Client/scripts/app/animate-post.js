@@ -4,7 +4,7 @@
     });
 
     $(document).on('click', '.add-comment', function () {
-        $('.comment-form').toggleClass('hidden');
+        $(this).closest('.post').children('div').children('.comment-form').toggleClass('hidden');
     });
 
     $(document).on('click', '.read-more', function () {

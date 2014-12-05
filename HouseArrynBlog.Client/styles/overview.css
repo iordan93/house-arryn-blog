@@ -19,7 +19,8 @@ body {
 /*Header*/
 
 .mainheader {
-    width: 70%;
+    width: 67%;
+    margin: 2% 3%;
 }
 
 .mainheader nav {
@@ -168,7 +169,7 @@ aside {
 /*Footer*/
 
 .mainfooter {
-    width: 75%;
+    width: 68%;
     height: 10%;
     float: left;
     color: white;
@@ -184,7 +185,7 @@ aside {
     border-style:inset;
     border-color: skyblue;
     border-radius: 5px;
-    margin: 2% 0;
+    margin: 2% 3%;
 }
 .mainfooter ul{
     display: inline-block;
