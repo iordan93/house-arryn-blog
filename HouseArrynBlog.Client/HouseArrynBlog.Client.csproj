@@ -58,12 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\Capture_it.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="scripts\lib\jquery-2.1.1.intellisense.js" />
     <Content Include="images\comment.png" />
     <Content Include="images\add-comment.png" />
     <Content Include="images\post-date.png" />
     <Content Include="images\read-more.png" />
-    <Content Include="images\search.png" />
     <Content Include="scripts\app\show-comments.js" />
     <Content Include="scripts\app\show-posts-by-tag.js" />
     <Content Include="scripts\lib\bootstrap.js" />
@@ -84,7 +87,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="html\home-page-demo.html" />
     <Content Include="images\blog-background.jpg" />
     <Content Include="images\search-icon.png" />
     <Content Include="images\team-logo.png" />
@@ -111,16 +113,16 @@
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\overview.css" />
     <Content Include="styles\post-form.css" />
-    <Content Include="images\search-ico.png" />
-    <Content Include="styles\style-demo.css" />
-    <Content Include="styles\style.css" />
     <Content Include="styles\toastr.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="admin\" />
+    <Folder Include="html\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
