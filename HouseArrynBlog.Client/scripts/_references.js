@@ -15,4 +15,5 @@
 /// <reference path="lib/toastr.js" />
 /// <reference path="lib/bootstrap.js" />
 /// <reference path="lib/jquery.twbspagination.js" />
+/// <reference path="app/show-comments.js" />
 /// <reference path="app/show-posts-by-tag.js" />

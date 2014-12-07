@@ -1,4 +1,4 @@
-function () {
+(function () {
         $(document).on('click', "#view-comments", showAllCommants);
 
     function showAllComments() {

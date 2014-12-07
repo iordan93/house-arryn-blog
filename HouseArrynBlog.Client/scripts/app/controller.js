@@ -93,6 +93,7 @@
             }, function (err) {
                 console.log(err);
             });
+            $('.content').show(600);
         }
     });
 
