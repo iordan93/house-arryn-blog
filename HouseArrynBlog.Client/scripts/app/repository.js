@@ -64,6 +64,9 @@
             return httpRequester.postJson(this.rootUrl, post, {
                 "Authorization": "Bearer twFpvZFX-x4oD1HdqTpXpaBOu6CsS52XAVA_G7jee6CcrSGSRT_GnW0ES-cjTUUsPa8v635QPqocv2MYsTLojcTO1jUDEmqSEnzUdpQcX71r9bPWozYBWBNw2v9YzmmJEKw5YYlV-ojj4rzRuF56D5ZWpBy98_88oJMVczGwnpXFg5UjP57IPbNdsYiKscZYpI0UuU7OhfJQ9Hr0vvAFlO-5C3dlX4VDwgqz1TTZDWd_WvEundXJtvUGCXlebeqdTDATGhUFp3HiOvN9HViufIjKGWYoXBM_B47YSFNCyo7RHHnbY00JHcb_-f3E7fgkk1ecV9A7ZN41NZnHin4NV8uyNPTe_JVa3c7ojfyA0FdXxgeAvAXFLIAO1raAv6HZMqh863F9xEbXgrcBpZnHDPQqsNspyg0jFab7RhyaD_aiPJ_rbN03dmgpKrCHwTDgk8rKCLLUvA25Vpx4DmlqfTiL5CK4X9kl9SjWl6NyvBPNQPG7-qXYyTj2L48Wwtjc"
             });
+        },
+        list: function () {
+            return httpRequester.getJson(this.rootUrl + "list");
         }
     });
 
