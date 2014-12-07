@@ -26,25 +26,24 @@
                 }
                 $('#posts').html(tempHtml);
                 $('.content').stop(true, true).show(600);
-                $(".get-single-post").off("click")
-                    .on("click", function (e) {
-                        var id = $(this).data("id");
-                        self.repository.posts.getById(id)
-                        .then(function (post) {
-                            return ui.loadHtml("post-details", post);
-                        }, function (err) {
-                            console.log(err);
-                        })
-                        .then(function (result) {
-                            var div = $("<div>").html("Single post");
-                            div.append(tmpl(result.templateString, result.data));
-                            $("#wrapper").html("");
-                            div.appendTo($("#wrapper"));
-                        }, function (err) {
-                            console.log(err);
-                        });
-                        e.preventDefault();
+                $(document).on("click", ".get-post", function (e) {
+                    var id = $(this).data("id");
+                    self.repository.posts.getById(id)
+                    .then(function (post) {
+                        return ui.loadHtml("post-details", post);
+                    }, function (err) {
+                        console.log(err);
+                    })
+                    .then(function (result) {
+                        $('#posts').html("");
+                        $('.content').show(600);
+                        $('#post-form').stop(true, true).hide(300);
+                        $('#posts').append(tmpl(result.templateString, result.data));
+                    }, function (err) {
+                        console.log(err);
                     });
+                    e.preventDefault();
+                });
             }, function (err) {
                 console.log(err);
             });
@@ -66,14 +65,14 @@
             this.repository.posts.getAll()
             .then(function (posts) {
                 $('#posts').html("");
-                $('#post-form').stop(true, true).hide(300); 
+                $('#post-form').stop(true, true).hide(300);
                 var tagMatch = $('#search-tag').val();
-                
+
                 var matches = [];
                 for (var i = 0; i < posts.length; i++) {
                     for (var j = 0; j < posts[i].tags.length; j++) {
                         var currentTag = posts[i].tags[j].Name;
-                        if(currentTag === tagMatch) {
+                        if (currentTag === tagMatch) {
                             matches.push(posts[i]);
                         }
                     }
@@ -85,7 +84,7 @@
             })
             .then(function (result) {
                 var tempHtml = "<h1>Results for: " + $('#search-tag').val() + "</h1>";
-                
+
                 if (!result.data.length) {
                     tempHtml = "<br /><hr /><h1>Sorry, son! There are no matches for this tag!<h1 />";
                 }

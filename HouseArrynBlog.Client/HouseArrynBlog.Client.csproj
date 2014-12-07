@@ -73,6 +73,7 @@
     <Content Include="scripts\lib\jquery-2.1.1.min.map" />
     <Content Include="packages.config" />
     <Content Include="scripts\partials\post-concise.html" />
+    <Content Include="scripts\partials\post-details.html" />
     <Content Include="styles\bootstrap-theme.css.map" />
     <Content Include="styles\bootstrap.css.map" />
     <None Include="Web.Debug.config">
