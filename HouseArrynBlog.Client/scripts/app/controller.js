@@ -12,15 +12,20 @@
             .then(function (posts) {
                 $('#posts').html("");
                 $('.content').show(600);
-                $('#post-form').hide(300);
+                $('#post-form').stop(true, true).hide(300);
                 return ui.loadHtml("post-concise", posts);
             }, function (err) {
                 console.log(err);
             })
             .then(function (result) {
+                var tempHtml = '';
                 for (var i = 0; i < result.data.length; i++) {
-                    $('#posts').append(tmpl(result.templateString, result.data[i]));
+                    console.log(result.data[i].id);
+                    tempHtml += tmpl(result.templateString, result.data[i]);
+
                 }
+                $('#posts').html(tempHtml);
+                $('.content').stop(true, true).show(600);
                 $(".get-single-post").off("click")
                     .on("click", function (e) {
                         var id = $(this).data("id");
@@ -61,11 +66,8 @@
             this.repository.posts.getAll()
             .then(function (posts) {
                 $('#posts').html("");
-                
-                $('#post-form').hide(300);
-               
+                $('#post-form').stop(true, true).hide(300); 
                 var tagMatch = $('#search-tag').val();
-                $('#posts').append("<h1>Results for: "+ tagMatch + "</h1>");
                 
                 var matches = [];
                 for (var i = 0; i < posts.length; i++) {
@@ -82,18 +84,21 @@
                 console.log(err);
             })
             .then(function (result) {
+                var tempHtml = "<h1>Results for: " + $('#search-tag').val() + "</h1>";
+                
                 if (!result.data.length) {
-                    $('#posts').append("<br /><hr /><h1>Sorry, son! There are no matches for this tag!<h1 />")
+                    tempHtml = "<br /><hr /><h1>Sorry, son! There are no matches for this tag!<h1 />";
                 }
                 else {
                     for (var i = 0; i < result.data.length; i++) {
-                        $('#posts').append(tmpl(result.templateString, result.data[i]));
+                        tempHtml += tmpl(result.templateString, result.data[i]);
                     }
                 }
+                $('#posts').html(tempHtml);
+                $('.content').stop(true, true).show(600);
             }, function (err) {
                 console.log(err);
             });
-            $('.content').show(600);
         }
     });
 
