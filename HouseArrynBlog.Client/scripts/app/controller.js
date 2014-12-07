@@ -98,6 +98,16 @@
             }, function (err) {
                 console.log(err);
             });
+        },
+        loadSidebar: function (selector) {
+            var element = $(selector);
+            console.log(element);
+            this.repository.tags.popular()
+            .then(function (data) {
+                console.log(data);
+            }, function (err) {
+                console.log(err);
+            });
         }
     });
 

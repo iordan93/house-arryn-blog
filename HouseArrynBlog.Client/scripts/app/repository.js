@@ -89,6 +89,9 @@
     var TagsRepository = Class.extend({
         init: function (rootUrl) {
             this.rootUrl = rootUrl + "tags/";
+        },
+        popular: function () {
+            return httpRequester.getJson(this.rootUrl + "popular");
         }
     });
 
