@@ -103,7 +103,7 @@
             this.rootUrl = rootUrl + "search/";
         },
         search: function (query) {
-            return httpRequester.getJson(this.rootUrl + "?query=" + escape(query));
+            return httpRequester.getJson(this.rootUrl + "?query=" + query);
         }
     });
 
