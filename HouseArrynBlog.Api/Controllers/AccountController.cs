@@ -18,6 +18,7 @@ using HouseArrynBlog.Api.Providers;
 using HouseArrynBlog.Api.Results;
 using HouseArrynBlog.Models;
 using HouseArrynBlog.Data;
+using System.Net;
 
 namespace HouseArrynBlog.Api.Controllers
 {
@@ -73,7 +74,7 @@ namespace HouseArrynBlog.Api.Controllers
         public IHttpActionResult Logout()
         {
             Authentication.SignOut(CookieAuthenticationDefaults.AuthenticationType);
-            return Ok();
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
         // POST api/Account/Register

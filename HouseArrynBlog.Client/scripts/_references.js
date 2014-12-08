@@ -16,3 +16,7 @@
 /// <reference path="lib/rsvp.js" />
 /// <reference path="lib/template.js" />
 /// <reference path="lib/toastr.js" />
+/// <reference path="../admin/scripts/admin-controller.js" />
+/// <reference path="../admin/scripts/admin-repository.js" />
+/// <reference path="../admin/scripts/app-start.js" />
+/// <reference path="../admin/scripts/_references.js" />
