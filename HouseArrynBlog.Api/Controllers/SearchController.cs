@@ -16,14 +16,14 @@ namespace HouseArrynBlog.Api.Controllers
         public IHttpActionResult Search([FromUri]string query)
         {
             var context = new HouseArrynBlogContext();
-            var result = new SearchResultViewModel() { Query = query, Posts = new List<ConcisePostViewModel>() };
+            var result = new SearchResultViewModel() { Query = query, Posts = new List<PostViewModel>() };
             var tag = context.Tags.Where(t => t.Name == query).FirstOrDefault();
             if (tag != null)
             {
                 var posts = tag.Posts
                     .AsQueryable()
                     .OrderByDescending(p => p.PublishDate)
-                    .Select(ConcisePostViewModel.FromPost);
+                    .Select(PostViewModel.FromPost);
                 result.Posts = posts;
             }
 

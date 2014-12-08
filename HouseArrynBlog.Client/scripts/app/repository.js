@@ -101,6 +101,9 @@
     var SearchRepository = Class.extend({
         init: function (rootUrl) {
             this.rootUrl = rootUrl + "search/";
+        },
+        search: function (query) {
+            return httpRequester.getJson(this.rootUrl + "?query=" + escape(query));
         }
     });
 

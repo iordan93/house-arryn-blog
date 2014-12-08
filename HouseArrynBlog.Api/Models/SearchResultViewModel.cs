@@ -9,6 +9,6 @@ namespace HouseArrynBlog.Api.Models
     {
         public string Query { get; set; }
 
-        public IEnumerable<ConcisePostViewModel> Posts { get; set; }
+        public IEnumerable<PostViewModel> Posts { get; set; }
     }
 }

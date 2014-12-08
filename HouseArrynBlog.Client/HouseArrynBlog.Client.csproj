@@ -77,6 +77,8 @@
     <Content Include="packages.config" />
     <Content Include="scripts\partials\post-concise.html" />
     <Content Include="scripts\partials\post-details.html" />
+    <Content Include="scripts\partials\sidebar-post.html" />
+    <Content Include="scripts\partials\sidebar-tag.html" />
     <Content Include="styles\bootstrap-theme.css.map" />
     <Content Include="styles\bootstrap.css.map" />
     <None Include="Web.Debug.config">
