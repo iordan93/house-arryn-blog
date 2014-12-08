@@ -67,7 +67,6 @@
     <Content Include="images\add-comment.png" />
     <Content Include="images\post-date.png" />
     <Content Include="images\read-more.png" />
-    <Content Include="scripts\app\show-comments.js" />
     <Content Include="scripts\app\show-posts-by-tag.js" />
     <Content Include="scripts\lib\bootstrap.js" />
     <Content Include="scripts\lib\bootstrap.min.js" />
