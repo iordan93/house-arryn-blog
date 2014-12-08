@@ -145,11 +145,7 @@
                         self.displayMessage("danger", "The content is required.");
                         return;
                     }
-                    var tags = $("#post-tags").val().split(/,\s+/g);
-                    if (!tags || !tags[0]) {
-                        self.displayMessage("danger", "The tags are required.");
-                        return;
-                    }
+                    
                     var id = $(this).data("updateId");
                     self.repository.posts.update(id, title, content, tags)
                     .then(function (data) {
