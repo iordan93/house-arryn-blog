@@ -137,7 +137,7 @@ body {
     border: 2px inset #FF4500;
 }
 
-.comment-description, #post-content {
+.comment-text, #post-content {
     width: 60%;
     height: 200px;
     max-width: 100%;
@@ -147,7 +147,7 @@ body {
     width: 30%;
 }
 
-.comment-name, .comment-email, .comment-description, #title, #tags, #post-content {
+.comment-name, .comment-email, .comment-text, #title, #tags, #post-content {
     margin-top: 10px;
     border: none;
     padding: 5px;
