@@ -147,7 +147,7 @@
                     }
                     
                     var id = $(this).data("updateId");
-                    self.repository.posts.update(id, title, content, tags)
+                    self.repository.posts.update(id, title, content)
                     .then(function (data) {
                         self.displayMessage("success", "Post edited successfully,");
                         $("#edit-post-form").hide();

@@ -56,12 +56,11 @@
 
             return httpRequester.postJson(this.rootUrl, post, getLoginHeaders());
         },
-        update: function (id, title, content, tags) {
+        update: function (id, title, content) {
             var post = {
                 title: title,
                 content: content,
-                categoryId: 1,
-                tags: tags
+                categoryId: 1
             };
 
             return httpRequester.putJson(this.rootUrl + id, post, getLoginHeaders());
