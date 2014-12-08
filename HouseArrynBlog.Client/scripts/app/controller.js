@@ -27,30 +27,47 @@
                 $('.content').stop(true, true).show(600);
                 $(document).off("click", ".get-post")
                     .on("click", ".get-post", function (e) {
-                    var id = $(this).data("id");
-                    self.repository.posts.getById(id)
-                    .then(function (post) {
-                        return ui.loadHtml("post-details", post);
-                    }, function (err) {
-                        console.log(err);
-                    })
-                    .then(function (result) {
-                        $('#posts').html("");
-                        $('.content').show(600);
-                        $('#post-form').stop(true, true).hide(300);
-                        $('#posts').append(tmpl(result.templateString, result.data));
-
-                        $("#view-comments").off("click")
-                        .on("click", function (e) {
-                            $("#comments").removeClass("hidden");
-                            $(this).parent().hide();
-                            e.preventDefault();
+                        var id = $(this).data("id");
+                        self.repository.posts.getById(id)
+                        .then(function (post) {
+                            return ui.loadHtml("post-details", post);
+                        }, function (err) {
+                            console.log(err);
                         })
-                    }, function (err) {
-                        console.log(err);
+                        .then(function (result) {
+                            $('#posts').html("");
+                            $('.content').show(600);
+                            $('#post-form').stop(true, true).hide(300);
+                            $('#posts').append(tmpl(result.templateString, result.data));
+
+                            $("#view-comments").off("click")
+                            .on("click", function (e) {
+                                $("#comments").removeClass("hidden");
+                                $(this).parent().hide();
+                                e.preventDefault();
+                            });
+
+                            $(".comment-button").off("click")
+                            .on("click", function (e) {
+                                var postId = $(".get-single-post").data("id");
+                                var username = $(".comment-name").val();
+                                var email = $(".comment-email").val();
+                                var text = $(".comment-text").val();
+
+                                self.repository.comments.create(postId, username, email, text)
+                                .then(function (comment) {
+                                    console.log(com);
+                                }, function (err) {
+                                    console.log(err);
+                                });
+
+                                e.preventDefault();
+                            });
+                        }, function (err) {
+                            console.log(err);
+                        });
+                        e.preventDefault();
                     });
-                    e.preventDefault();
-                });
             }, function (err) {
                 console.log(err);
             });

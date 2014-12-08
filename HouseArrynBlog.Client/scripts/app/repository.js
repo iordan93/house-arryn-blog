@@ -77,7 +77,7 @@
         getAll: function() {
             return httpRequester.getJson(this.rootUrl);
         },
-        create: function (username, email, text) {
+        create: function (id, username, email, text) {
             // TODO: Add validation
             var comment = {
                 username: username,
@@ -85,7 +85,7 @@
                 text: text
             };
 
-            return httpRequester.postJson(this.rootUrl, post);
+            return httpRequester.postJson(this.rootUrl + id, comment);
         }
     });
 
