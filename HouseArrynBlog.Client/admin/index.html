@@ -13,6 +13,7 @@
     <script src="scripts/admin-repository.js"></script>
     <script src="scripts/admin-controller.js"></script>
     <script src="../scripts/app/ui.js"></script>
+    <script src="../scripts/lib/tinymce/tinymce.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -30,7 +31,9 @@
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul id="nav-left" class="nav navbar-nav">
+                        <ul id="nav-left" class="nav navbar-nav" style="display: none">
+                            <li><a href="#" id="menu-add-post">Add post</a></li>
+                            <li><a href="#" id="menu-edit-post">Edit post</a></li>
                         </ul>
                         <ul id="nav-right" class="nav navbar-nav navbar-right">
                         </ul>
