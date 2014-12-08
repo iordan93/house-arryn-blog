@@ -237,7 +237,6 @@
     <Content Include="scripts\partials\post-details.html" />
     <Content Include="scripts\partials\sidebar-post.html" />
     <Content Include="scripts\partials\sidebar-tag.html" />
-    <Content Include="scripts\tinymce\license.txt" />
     <Content Include="scripts\tinymce\plugins\advlist\plugin.js" />
     <Content Include="scripts\tinymce\plugins\advlist\plugin.min.js" />
     <Content Include="scripts\tinymce\plugins\anchor\plugin.js" />
@@ -385,8 +384,6 @@
     <Content Include="scripts\tinymce\skins\lightgray\skin.min.css" />
     <Content Include="scripts\tinymce\themes\modern\theme.js" />
     <Content Include="scripts\tinymce\themes\modern\theme.min.js" />
-    <Content Include="scripts\tinymce\tinymce.js" />
-    <Content Include="scripts\tinymce\tinymce.min.js" />
     <Content Include="styles\bootstrap-theme.css.map" />
     <Content Include="styles\bootstrap.css.map" />
     <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
