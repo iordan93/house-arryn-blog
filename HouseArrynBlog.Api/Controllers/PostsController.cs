@@ -146,12 +146,12 @@ namespace HouseArrynBlog.Api.Controllers
                 return BadRequest("There is no category with the provided ID: " + postModel.CategoryId + ".");
             }
 
-            var dbTags = GetTags(context, postModel.Tags);
+            // var dbTags = GetTags(context, postModel.Tags);
 
             post.Title = postModel.Title;
             post.Content = postModel.Content;
             post.Category = category;
-            post.Tags = dbTags;
+            // post.Tags = dbTags;
 
             context.SaveChanges();
 
@@ -187,7 +187,7 @@ namespace HouseArrynBlog.Api.Controllers
                     context.Tags.Add(newTag);
                     context.SaveChanges();
 
-                    dbTags.Add(newTag);
+                    dbTags.Add(context.Tags.FirstOrDefault(t => t.Name == tag));
                 }
                 else
                 {

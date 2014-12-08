@@ -62,6 +62,8 @@
     <Content Include="admin\scripts\admin-repository.js" />
     <Content Include="admin\scripts\app-start.js" />
     <None Include="admin\scripts\_references.js" />
+    <Content Include="admin\scripts\partials\choose-post.html" />
+    <Content Include="admin\scripts\partials\edit-post-form.html" />
     <Content Include="admin\scripts\partials\new-post-form.html" />
     <Content Include="fonts\Capture_it.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />

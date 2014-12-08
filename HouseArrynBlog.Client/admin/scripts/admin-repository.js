@@ -45,9 +45,8 @@
         },
         getById: function (id) {
             return httpRequester.getJson(this.rootUrl + id);
-        }, // TODO: Implement other methods
+        },
         create: function (title, content, tags) {
-            // TODO: Add validation
             var post = {
                 title: title,
                 content: content,
@@ -56,6 +55,16 @@
             };
 
             return httpRequester.postJson(this.rootUrl, post, getLoginHeaders());
+        },
+        update: function (id, title, content, tags) {
+            var post = {
+                title: title,
+                content: content,
+                categoryId: 1,
+                tags: tags
+            };
+
+            return httpRequester.putJson(this.rootUrl + id, post, getLoginHeaders());
         },
         list: function () {
             return httpRequester.getJson(this.rootUrl + "list");

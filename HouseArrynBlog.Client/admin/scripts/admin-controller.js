@@ -100,7 +100,70 @@
             });
         },
         loadEditForm: function () {
-            console.log('edit form');
+            var self = this;
+            this.repository.posts.getAll()
+            .then(function (data) {
+                return ui.loadHtml("choose-post", data);
+            }, function (err) {
+                console.log(err);
+            })
+            .then(function (result) {
+                var postsHtml = "<h2>Select a post to edit:</h2><div class=\"list-group\">";
+                for (var i = 0; i < result.data.length; i++) {
+                    postsHtml += tmpl(result.templateString, result.data[i]);
+                }
+
+                $("#main-content").html(postsHtml);
+                $(".post-select").click(function (e) {
+                    var postId = $(this).data("postId");
+                    self.repository.posts.getById(postId)
+                    .then(function (data) {
+                        self.loadUpdateForm(data);
+                    }, function (err) {
+                        console.log(err);
+                    });
+                    e.preventDefault();
+                });
+            }, function (err) {
+                console.log(err);
+            });
+        },
+        loadUpdateForm: function (data) {
+            var self = this;
+            ui.loadHtml("edit-post-form", data)
+            .then(function (result) {
+                $("#main-content").html(tmpl(result.templateString, result.data));
+
+                $("#update-post-button").click(function (e) {
+                    var title = $("#post-title").val();
+                    if (title == "") {
+                        self.displayMessage("danger", "The title is required.");
+                        return;
+                    }
+                    var content = tinyMCE.activeEditor.getContent();
+                    if (content == "") {
+                        self.displayMessage("danger", "The content is required.");
+                        return;
+                    }
+                    var tags = $("#post-tags").val().split(/,\s+/g);
+                    if (!tags || !tags[0]) {
+                        self.displayMessage("danger", "The tags are required.");
+                        return;
+                    }
+                    var id = $(this).data("updateId");
+                    self.repository.posts.update(id, title, content, tags)
+                    .then(function (data) {
+                        self.displayMessage("success", "Post edited successfully,");
+                        $("#edit-post-form").hide();
+                        self.loadMainPage();
+                    }, function (err) {
+                        self.displayMessage("danger", "The post could not be edited.");
+                    });
+                    e.preventDefault();
+                });
+            }, function (err) {
+                console.log(err);
+            });
         },
         initTinyMce: function (selector) {
             if (typeof (tinyMCE) != "undefined") {
