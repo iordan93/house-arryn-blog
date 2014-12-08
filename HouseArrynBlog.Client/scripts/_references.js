@@ -9,7 +9,6 @@
 /// <reference path="app/animate-post.js" />
 /// <reference path="app/show-posts.js" />
 /// <reference path="lib/bootstrap.js" />
-/// <reference path="app/show-comments.js" />
 /// <reference path="app/show-posts-by-tag.js" />
 /// <reference path="lib/class.js" />
 /// <reference path="lib/jquery-2.1.1.js" />

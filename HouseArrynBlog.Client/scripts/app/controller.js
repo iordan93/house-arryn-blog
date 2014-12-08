@@ -25,7 +25,8 @@
                 }
                 $('#posts').html(tempHtml);
                 $('.content').stop(true, true).show(600);
-                $(document).on("click", ".get-post", function (e) {
+                $(document).off("click", ".get-post")
+                    .on("click", ".get-post", function (e) {
                     var id = $(this).data("id");
                     self.repository.posts.getById(id)
                     .then(function (post) {
@@ -38,6 +39,13 @@
                         $('.content').show(600);
                         $('#post-form').stop(true, true).hide(300);
                         $('#posts').append(tmpl(result.templateString, result.data));
+
+                        $("#view-comments").off("click")
+                        .on("click", function (e) {
+                            $("#comments").removeClass("hidden");
+                            $(this).parent().hide();
+                            e.preventDefault();
+                        })
                     }, function (err) {
                         console.log(err);
                     });

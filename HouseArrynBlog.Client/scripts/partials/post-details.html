@@ -1,6 +1,6 @@
 <article class="post">
     <div class="post-header">
-        <h3><strong><a data-id="<%= id %>" href="#" class="get-single-post"><%= title %></a></strong></h3> 
+        <h3><strong><a data-id="<%= id %>" href="#" class="get-single-post"><%= title %></a></strong></h3>
         (<em><%= category.name %></em>)
         <span class="post-date"><img src="images/post-date.png" /> Last updated on: <%= publishDate %> </span>
     </div>
@@ -10,14 +10,26 @@
     <p class="post-description"><%= content %></p>
     <hr />
     <h4>Visits: <%= visits %></h4>
-    <span>view all comments :</span> <button id="view-comments"><img src="images/comment.png" /></button>
+    <div id="comment-group">
+        <span>view all comments :</span> <button id="view-comments"><img src="images/comment.png" /></button>
+    </div>
     <div id="all-comments"></div>
     <span>add new comment :</span> <button class="add-comment"><img src="images/add-comment.png" /></button>
     <br />
+    <div id="comments" class="hidden">
+        <% for(var i = 0; i < comments.length; i++) { %>
+        <div class="comment" data-comment-id="<%= comments[i].id %>">
+            <strong>Username: </strong> <%= comments[i].authorUsername %><br />
+            <strong>Email: </strong> <a href="mailto://<%= comments[i].authorEmail %>"><%= comments[i].authorEmail %></a><br />
+            <p><%= comments[i].text %></p>
+            <em>On <%= comments[i].publishDate %></em><hr />
+        </div>
+        <% } %>
+    </div>
     <div>
         <form class="comment-form hidden">
             <h3>Add new comment to the post</h3>
-            <input class="comment-name"type="text" placeholder="Name" />
+            <input class="comment-name" type="text" placeholder="Name" />
             <br />
             <input class="comment-email" type="text" placeholder="E-mail" /> *Optional
             <br />
