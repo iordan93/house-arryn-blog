@@ -60,8 +60,11 @@
             });
         },
         loadPostsByTag: function (tag) {
+            tag = tag || $("#search-tag").val();
+            $("#search-tag").val("");
+            tag = encodeURIComponent(tag);
             var self = this;
-            this.repository.search.search(tag || $('#search-tag').val())
+            this.repository.search.search(tag)
             .then(function (posts) {
                 $('#posts').html("");
                 $('#post-form').stop(true, true).hide(300);
