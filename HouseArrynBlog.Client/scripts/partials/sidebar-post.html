@@ -1,4 +1,4 @@
-﻿<%= Month %>/<%= Year %><br />
+<%= Month %>/<%= Year %> - <%= Posts.length %> posts<br/>
 <% for(var i = 0; i < Posts.length; i++) { %>
 <div id="post-<%= Posts[i].id %>">
     <a href="#" data-post-id="<%= Posts[i].id %>" class="post-link"><%= Posts[i].title %></a>
