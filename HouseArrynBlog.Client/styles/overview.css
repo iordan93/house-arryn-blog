@@ -232,7 +232,7 @@ body {
 }
 
 .search-button {
-    background-image: url('/images/search-icon.png');
+    background-image: url('../images/search-icon.png');
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
