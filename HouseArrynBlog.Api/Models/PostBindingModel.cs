@@ -19,7 +19,6 @@ namespace HouseArrynBlog.Api.Models
         [Required(ErrorMessage = "The category ID is required.")]
         public int CategoryId { get; set; }
 
-        [Required(ErrorMessage = "The tags are required.")]
         public ICollection<string> Tags { get; set; }
     }
 }
